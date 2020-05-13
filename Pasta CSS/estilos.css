@@ -1,13 +1,53 @@
 /* Aula inicial :D */
-body {
-    background-image: url("https://images3.alphacoders.com/669/thumb-1920-669931.jpg");
+
+/*softreset CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  body {
+    background-image: url('../img/fundo.jpg');
     background-size: auto 100vh;
     font-family: Arial;
     height: 100vh;
+    font-size: 12px;
   }
+
+  /*Se a tela tiver pelo menos 400 Pixels ela vai carregar esses estilos*/
+  @media (min-width: 400px) {
+    body {
+      font-size: 14px;
+    }
+  }
+
+  /*Break Points*/
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+  }
+
+    /*Break Points*/
+    @media (min-width: 1200px) {
+      body {
+        font-size: 20px;
+      }
+    }
   
+  header {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .menu {
     background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
   }
   
   .menu ul {
@@ -19,6 +59,12 @@ body {
     list-style: none;
   }
   
+  .menu a {
+    
+  display: block;
+  padding: 10px 22px;
+  }
+
   a {
     color: blue;
     text-decoration: none; 
@@ -33,9 +79,18 @@ body {
     color: whitesmoke;
     text-align: center;
   }
+
+  .site-title {
+    font-size: 5em;
+  }
   
   .site-subtitle {
     font-style: italic;
     text-decoration: underline;
+  }
+
+  .img-portfolio {
+    height: 180px;
+    width: 180px;
   }
   
