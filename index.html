@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav class="menu">
-          <ul>
+          <ul class="container">
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#portifólio">Portfólio</a></li>
             <li><a href="#contato">Contato</a></li>
@@ -22,28 +22,79 @@
           <h2 class="site-subtitle">Nerd / Geek / Padawan / Web Developer</h2>
         </div>
     </header>
-  <section class="Portifólio" id="portifólio">
-  <h2>Portfólio</h2>
+
+  <section class="sobre container" id="sobre">
+    <h2>Sobre</h2>
+    <figure class="avatar">
+      <img src="https://scontent.fcpq13-1.fna.fbcdn.net/v/t1.0-9/72651090_2465512796878660_5352123030044672000_n.jpg?_nc_cat=103&_nc_sid=8024bb&_nc_eui2=AeEZG_vNzO4wInCBiZV3W_Xoul-TRM0qOHe6X5NEzSo4d0ePqovt2qZ6XDClQGhGpQ96UQnKFqc7BiUydB3Q160N&_nc_ohc=qb9M3KqbObMAX93bRLp&_nc_ht=scontent.fcpq13-1.fna&oh=21d159afaf9db049f094f22df193c7f4&oe=5EE66E04" alt="">
+    </figure>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam itaque doloremque hic, corporis maxime veritatis, reiciendis non quia, facilis officiis rerum recusandae. Sequi illum quo veniam a minima, quia laboriosam!
+    </p>
+
+    <p>
+      Quasi assumenda molestias tempore, similique, distinctio quo adipisci modi quae, aspernatur nemo architecto delectus corporis suscipit maiores recusandae consequatur ducimus error quam impedit saepe deserunt quia! Ipsa dolorum dicta iure.
+    </p>
+
+    <p>
+      Natus pariatur voluptates dolore a enim, quaerat hic magnam, labore expedita incidunt molestiae ipsum vel et nobis maxime ea suscipit vero commodi nesciunt! Dolore temporibus asperiores quae aliquam eligendi eius.
+    </p>
+
+    <p>
+      Esse site foi construido durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS da ALURA!</a> 
+    </p>
+  </section>
+
+  <section class="Portifólio container" id="portifólio">
+    <h2>Portfólio</h2>
     <div class="grid">
-      <figure>
-        <img class="img-portfolio" src="./img/Torre-Stark.jpg." alt="eCommerce">
-        <figcaption>eCommerce</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/batmobile.jpg" alt=">Mobile">
-        <figcaption>Mobile</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/webdesign.jpeg" alt="Web design">
-        <figcaption>Web design</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/projetopessoal.jpg" alt="Projetos pessoais">
-        <figcaption>Projetos pessoais</figcaption>
-      </figure>
+
+      <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/Torre-Stark.jpg." alt="eCommerce">
+            </figure>
+            <div class="card-back">
+              <h3>eCommerce</h3>
+            </div>
+          </div>
+      </div>
+
+      <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/batmobile.jpg" alt=">Mobile">
+            </figure>
+            <div class="card-back">
+              <h3>Mobile</h3>
+            </div>
+          </div>
+      </div>
+
+      <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/webdesign.jpeg" alt="Web design">
+            </figure>
+            <div class="card-back">
+              <h3>Web design</h3>
+            </div>
+          </div>
+      </div>
+
+      <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/projetopessoal.jpg" alt="Projetos pessoais">
+            </figure>
+            <div class="card-back">
+              <h3>Projetos pessoais</h3>
+            </div>
+          </div>
+      </div>
     </div>
   </section>
-  <section class="contato" id="contato">
+  <section class="contato container" id="contato">
     <h2>Contato</h2>
     <div class="grid icons">
       <a target="_blank" href="https://github.com/JBineliAlves">
