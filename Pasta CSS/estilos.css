@@ -8,46 +8,47 @@
 }
 
   body {
-    background-image: url('../img/fundo.jpg');
+    background-image: url('../img/Fundo.jpg');
     background-size: auto 100vh;
-    font-family: Arial;
+    font-family: 'Sacramento', cursive;
     height: 100vh;
     font-size: 12px;
   }
 
   /*Se a tela tiver pelo menos 400 Pixels ela vai carregar esses estilos*/
-  @media (min-width: 400px) {
+  @media (min-width: 420px) {
     body {
       font-size: 14px;
     }
   }
 
   /*Break Points*/
-  @media (min-width: 600px) {
+  @media (min-width: 490px) {
     body {
       font-size: 18px;
     }
   }
 
-    /*Break Points*/
-    @media (min-width: 1200px) {
-      body {
-        font-size: 20px;
-      }
-    }
+   /*Break Points*/
+   @media (min-width: 1200px) {
+     body {
+      font-size: 20px;
+     }
+   }
   
   header {
-    height: 75vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .menu {
-    background-color: white;
+    background-color: black;
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1;
   }
   
   .menu ul {
@@ -59,19 +60,40 @@
     list-style: none;
   }
   
-  .menu a {
-    
+  .menu a { 
   display: block;
   padding: 10px 22px;
+  color: blue;
+  font-size: 1.5em;
+  transition: background-color, color, 0.75s;
+  }
+
+  .menu a:active,
+  .menu a:hover {
+    background-color: blue;
+    color: white;
   }
 
   a {
-    color: blue;
     text-decoration: none; 
   }
   
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+  }
+
+  .titulos {
+    transform: scale(.1) rotate(0deg);
+    opacity: 0;
+
+    animation: linear 2s AnimaTitulo forwards;
+  }
+
+  @keyframes AnimaTitulo {
+    100% {
+      transform: scale(1) rotate(710deg);
+      opacity: 1;
+    }
   }
   
   .site-subtitle,
@@ -81,16 +103,81 @@
   }
 
   .site-title {
-    font-size: 5em;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 4em;
   }
   
   .site-subtitle {
+    font-family: 'Monoton', cursive;
+    font-size: 2em;
     font-style: italic;
+    line-height: 2.4em;
     text-decoration: underline;
+  }
+
+  .contato,
+  .Portifólio {
+    padding: 2em;
+    min-height: 100vh;
+  }
+
+  .contato h2,
+  .Portifólio h2 {
+    font-family: 'Homemade Apple', cursive;
+    color: whitesmoke;
+    margin-bottom: 1em;
+    font-size: 2em;
+  }
+
+  .Portifólio .grid {
+    display: grid;
+    gap: 2em;
+  }
+
+  @media (min-width: 560px) {
+    .Portifólio .grid {
+    grid-template-columns: 240px 240px;
+    }
+  }
+
+  @media (min-width: 880px) {
+    .Portifólio .grid {
+    grid-template-columns: repeat(3,240px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 48px - 8em);
+    }
+  }  
+
+  .Portifólio figure {
+    text-align: center;
+    font-size: 1.5em;
   }
 
   .img-portfolio {
     height: 180px;
-    width: 180px;
+    width: 240px;
+    object-fit: cover;
+    border-radius: 32px;
+    transition: transform 0.3s;
   }
-  
+
+  .img-portfolio:hover {
+    transform: scale(1.2) rotate(-5deg);
+  }
+
+  .contato .icons {
+    text-align: center;
+  }
+
+  .contato a {
+    color: whitesmoke;
+    font-size: 4em;
+    transition: text-shadow 0.5s;
+  }
+
+  .contato a:active,
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 5px 5px 10px rgb(14, 215, 233);
+  }
